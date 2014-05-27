@@ -31,7 +31,7 @@ class UsersController < ApplicationController
       if @user.save
         sign_in @user
         flash[:success] = "Welcome to Goodland Framily!"
-        format.html { redirect_to @user }
+        format.html { redirect_to root_url }
       else
         format.html { render action: 'new' }
       end
