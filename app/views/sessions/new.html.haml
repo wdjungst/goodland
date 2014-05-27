@@ -1,0 +1,29 @@
+- provide(:title, "Sign in")
+%h4.left-offset Welcome Framily
+#login_form.input-form.round.span6.offset3
+  %p
+    New user? #{link_to "Sign up now!", '/users/new', class: 'no-visited'}
+  = form_for(:session, url: sessions_path) do |f|
+    %table
+      %tbody
+        %tr
+          %td
+            = f.label :email
+          %td
+            = f.text_field :email
+        %tr
+          %td
+            = f.label :password
+          %td
+            = f.password_field :password
+        %tr
+          %td.checkbox
+            %label
+              %input{type: 'checkbox'} Remember Me
+        %tr
+          %td
+            %a#forgot.no-visited{href: '#'} Forgot login / pw ?
+        %tr
+          %td
+          %td
+            = f.submit "Sign in", class: 'btn btn-sm btn-primary pull-right'

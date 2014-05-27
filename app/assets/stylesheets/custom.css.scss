@@ -1,0 +1,74 @@
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  webkit-box-sizing: border-box;
+  box-siszing: border-box;
+}
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+
+.input-form {
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5%;
+  border: solid;
+  border-width: 1px;
+  padding: 10px;
+  background-color: rgba(240, 248, 255, 0.5);
+}
+
+.form-large {
+  max-width: 550px;
+}
+
+#signup_form input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+#signup_form input {
+  height: auto !important;
+}
+
+#error_details {
+  max-width: 280px;
+  overflow: scroll;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.no-visited {
+  color: aqua !important;
+}

@@ -1,0 +1,16 @@
+%h4.left-offset Welcome Framily
+%form#login_form.input-form.round{role: 'form'}
+  %a.no-visited{href: '/users/new'} Not yet registered?
+  .form-group
+    %label{for: 'login'} Email
+    %input#login.form-control{type: 'email', placeholder: 'Enter email'}
+  .form-group
+    %label{for: 'password'} Password
+    %input#password.form-control{type: 'password', placeholder: 'Password'}
+  .checkbox
+    %label
+      %input{type: 'checkbox'} Remember Me
+  %a#forgot.no-visited{href: '#'} Forgot login / pw ?
+  %button.btn.btn-primary.btn-xs.pull-right{type: 'submit'} Submit
+
+
